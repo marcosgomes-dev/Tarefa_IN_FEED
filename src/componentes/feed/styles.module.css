@@ -1,0 +1,32 @@
+.feed {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    width: 100%;
+    margin: 40px 64px;
+}
+
+.feed > :first-child {
+    flex: 1;
+    max-width: 300px;
+}
+
+.feed > :last-child {
+    flex: 2;
+    max-width:100%;
+}
+
+.listaPosts {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.postConteudo {
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    white-space: pre-line;
+    color: #d1d5db;
+}

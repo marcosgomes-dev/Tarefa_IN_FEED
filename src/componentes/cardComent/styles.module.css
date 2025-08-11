@@ -1,0 +1,206 @@
+:root {
+  --cor-principal: #007bff;
+  --cor-principal-hover: #0056b3;
+  --cor-fundo-card: #0e0e1b;
+  --cor-fundo-comentario: #1b1d2a;
+  --cor-texto-principal: #ffffff;
+  --cor-texto-secundario: #c1c2ccb3;
+  --cor-placeholder: #444444;
+  --raio-borda: 0.5rem;
+  --padding-padrao: 1rem;
+}
+
+.card {
+  background-color: var(--cor-fundo-card);
+  color: var(--cor-texto-principal);
+  width: 100%;
+  max-width: 842px;
+  padding: 32px 40px 45px;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.avatar {
+  width: 4.2rem;
+  height: 4.2rem;
+  border-radius: 50%;
+  border: 3px solid var(--cor-principal-hover);
+  object-fit: cover;
+}
+
+.infoUsuario {
+  flex-grow: 1;
+  margin-left: 1rem;
+}
+
+.infoUsuario h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.infoUsuario p {
+  font-size: 1rem;
+  opacity: 0.8;
+  margin: 0;
+}
+
+.tempo {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.corpo {
+  margin: 1rem 0;
+  font-size: 1rem;
+  color: var(--cor-texto-secundario);
+  font-family: "Inter", sans-serif;
+}
+
+.secaoComentarios {
+  margin-top: 1.5rem;
+}
+
+.secaoComentarios h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+}
+
+.secaoComentarios textarea {
+  width: 810px;
+  max-width: 100%;
+  height: 5rem;
+  border-radius: var(--raio-borda);
+  border: none;
+  padding: var(--padding-padrao);
+  font-size: 1rem;
+  resize: none;
+  background-color: #dddddd;
+  color: black;
+  outline: none;
+  margin-bottom: 0.9rem;
+}
+
+.secaoComentarios textarea::placeholder {
+  color: var(--cor-placeholder);
+}
+
+.postar {
+  width: 8.7rem;
+  margin-top: 0.5rem;
+  padding: 0.8rem;
+  border-radius: var(--raio-borda);
+  border: none;
+  background-color: var(--cor-principal);
+  color: var(--cor-texto-principal);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.postar:hover {
+  background-color: var(--cor-principal-hover);
+}
+
+.postar:focus {
+  outline: 2px solid var(--cor-principal-hover);
+}
+
+.comentario {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.containerComentario {
+  display: flex;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.comentarioAvatar {
+  width: 62px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.comentarioBox {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--cor-fundo-comentario);
+  padding: 11px 29px 23px 20px;
+  border-radius: var(--raio-borda);
+  width: 717px;
+  max-width: 100%;
+  color: #e4e6eb;
+  font-size: 1.15rem;
+  line-height: 1.4;
+  gap: 29px;
+}
+
+.comentarioBox p {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  margin: 0;
+}
+
+.comentarioAcoes {
+  display: flex;
+  justify-content: space-between;
+}
+
+.comentarioAcoes p {
+  margin: 0;
+}
+
+.comentarioAcoes button {
+  background: none;
+  border: none;
+  color: var(--cor-texto-principal);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0;
+  margin-top: 14px;
+}
+
+.comentarioAcoes button:hover {
+  color: var(--cor-principal);
+}
+
+.comentarioAcoes img {
+  width: 25px;
+  height: 24px;
+}
+
+.like {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  background: none;
+  border: none;
+  color: var(--cor-texto-principal);
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.like:hover {
+  color: var(--cor-principal);
+}
+
+.like img {
+  width: 20px;
+  height: 20px;
+}
