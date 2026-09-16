@@ -1,69 +1,78 @@
-# React + TypeScript + Vite
+# Tarefa IN FEED - In Junior
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este repositório contém um projeto front-end desenvolvido como tarefa na IN Junior, com foco na criação de **componentes React** e na estruturação de uma interface no estilo feed de rede social.
 
-Currently, two official plugins are available:
+## Objetivo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Praticar os conceitos fundamentais de React com TypeScript, como:
 
-## Expanding the ESLint configuration
+- Criação e composição de componentes funcionais
+- Passagem de props entre componentes
+- Estilização com CSS Modules
+- Estruturação de layout com componentes reutilizáveis
+- Configuração de projeto com Vite + React + TypeScript
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📋 Sobre o projeto
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+O **IN FEED** é uma interface de feed de publicações inspirada em redes sociais profissionais, composta por:
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **Header** — barra superior de navegação da aplicação
+- **Card Pessoal** — card fixo com as informações do usuário logado (nome e foto)
+- **Card de Post** — cards de publicações de outros usuários, exibindo nome, cargo, tempo de publicação, conteúdo do post, e a foto do autor e do usuário logado
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## ✨ Funcionalidades
+
+- Renderização de múltiplos posts no feed a partir de dados estáticos
+- Exibição de informações do usuário logado em todos os cards de post
+- Layout componentizado e estilizado com CSS Modules
+
+## 📁 Estrutura do projeto
+
+```text
+Tarefa_IN_FEED/
+├── src/
+│   ├── App.tsx                    # Componente raiz (Header + Feed)
+│   ├── main.tsx                   # Ponto de entrada da aplicação
+│   ├── index.css                  # Estilos globais
+│   ├── assets/                    # Fotos de perfil dos usuários
+│   └── componentes/
+│       ├── header/                # Componente de cabeçalho
+│       ├── feed/                  # Componente de feed (lista de posts)
+│       ├── cardPessoal/           # Card com info do usuário logado
+│       └── cardComent/            # Card de publicação
+├── index.html
+├── package.json
+├── tsconfig.json
+└── vite.config.ts
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🚀 Como executar
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/marcosgomes-dev/Tarefa_IN_FEED.git
+   ```
+2. Acesse a pasta do projeto:
+   ```bash
+   cd Tarefa_IN_FEED
+   ```
+3. Instale as dependências:
+   ```bash
+   npm install
+   ```
+4. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   ```
+5. Acesse no navegador: `http://localhost:5173`
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🛠️ Tecnologias utilizadas
+
+- **React 19**
+- **TypeScript**
+- **Vite**
+- **CSS Modules**
+
+## Autor
+
+Projeto desenvolvido como tarefa de componentes React na IN Junior.
